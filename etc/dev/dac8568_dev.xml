@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<node id="dac8568_dev" fwinfo="endpoint; width=4">
+  <node address="0x0" mask="0x00000001" id="busy"/>
+
+  <node address="0x8" mask="0x00000001" id="rst_n" />
+  <node address="0x8" mask="0x00000002" id="start" />
+  <node address="0x8" mask="0x000003fc" id="sel_ch"/>
+
+  <node address="0x9" mask="0x0000ffff" id="data_ch0"/>
+  <node address="0x9" mask="0xffff0000" id="data_ch1"/>
+  <node address="0xa" mask="0x0000ffff" id="data_ch2"/>
+  <node address="0xa" mask="0xffff0000" id="data_ch3"/>
+  <node address="0xb" mask="0x0000ffff" id="data_ch4"/>
+  <node address="0xb" mask="0xffff0000" id="data_ch5"/>
+  <node address="0xc" mask="0x0000ffff" id="data_ch6"/>
+  <node address="0xc" mask="0xffff0000" id="data_ch7"/>
+</node>

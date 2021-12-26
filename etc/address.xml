@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<node>
+    <node id="global_dev" module="file://./dev/global_dev.xml" address="0x00000000" tags="slave"/>
+    <node id="dac8568_dev0" module="file://./dev/dac8568_dev.xml" address="0x20000000" tags="slave"/>
+    <node id="dac8568_dev1" module="file://./dev/dac8568_dev.xml" address="0x40000000" tags="slave"/>
+    <node id="spi_dev" module="file://./dev/opencores_spi.xml" address="0x60000000" tags="slave"/>
+    <node id="cee_dev" module="file://./dev/cee_dev.xml" address="0x80000000" tags="slave"/>
+</node>
+
