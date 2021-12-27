@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-import time
 import logging
-import os
 
 import coloredlogs
 
@@ -20,19 +18,13 @@ __author__ = "Sheng Dong"
 __email__ = "s.dong@mails.ccnu.edu.cn"
 
 
-class MainConfig(object):
-    def __init__(self):
-        self.GLOBAL_RESET = True
-        self.JADEPIX_ANA_DATA = False
-
-
 def main():
     ipbus_link = IPbusLink()
 
     global_dev = GlobalDevice(ipbus_link)
     dac8568_dev0 = Dac8568Device(ipbus_link, dev_nr=0)
     dac8568_dev1 = Dac8568Device(ipbus_link, dev_nr=1)
-    cee_spi_dev =  CeeSpiConfig(ipbus_link)
+    cee_spi_dev = CeeSpiConfig(ipbus_link)
 
     ''' Soft global reset '''
     global_dev.set_soft_rst()
@@ -45,7 +37,7 @@ def main():
     dac8568_dev0.start_conv()
 
     """ DAC8568 dev 1 Settings"""
-    global_dev.set_dac_nr(0)
+    global_dev.set_dac_nr(1)
     dac8568_dev1.reset_dev()
     dac8568_dev1.select_ch(0xff)
     dac8568_dev1.set_volt(ch=1, volt=1.0)
