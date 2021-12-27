@@ -228,7 +228,7 @@ class SpiDevice:
 
     def w_data_regs(self, spi_data, go_dispatch=True):
         """Writing SPI configuration data to SPI data registers..."""
-        for i in range(0, 8):
+        for i in range(0, 4):
             reg_name = "d" + str(i)
             data = spi_data[i]
             self.w_reg(reg_name, reg_val=data, is_pulse=False, go_dispatch=go_dispatch)

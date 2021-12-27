@@ -20,7 +20,7 @@ class CeeSpiConfig:
         self.spi_data = []
         self.spi_dev = SpiDevice(self._ipbus_link)
 
-        self.reset_spi()
+        # self.reset_spi()
         self.spi_data = [0, 0, 0, 0, 0, 0, 0, 0]
         self.set_spi()
 
@@ -107,13 +107,13 @@ class CeeSpiConfig:
 
         :return:
         """
-        if self.is_busy_spi():
-            log.error("SPI is busy now! Stop!")
-        else:
+        # if self.is_busy_spi():
+        #     log.error("SPI is busy now! Stop!")
+        # else:
             # spi_data = self.set_spi_data()
-            self.spi_dev.w_data_regs(self.spi_data)
-            self.spi_dev.w_ctrl()
-            self.spi_dev.start()
+        self.spi_dev.w_data_regs(self.spi_data)
+        self.spi_dev.w_ctrl()
+        self.spi_dev.start()
 
     def set_spi_data(self, trans_data):
         self.spi_data[0] = trans_data

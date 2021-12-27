@@ -51,7 +51,7 @@ class Dac8568Device:
 
     def select_ch(self, ch):
         """ 8bit channel map """
-        reg_name = self.reg_name_base + "sel_ch"
+        reg_name = "sel_ch"
         self.w_reg(reg_name, reg_val=ch, is_pulse=False, go_dispatch=True)
 
     def set_data(self, ch, data):

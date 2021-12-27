@@ -41,14 +41,14 @@ def main():
     global_dev.set_dac_nr(0)
     dac8568_dev0.reset_dev()
     dac8568_dev0.select_ch(0xff)
-    dac8568_dev0.set_volt(1.0)
+    dac8568_dev0.set_volt(ch=0, volt=1.0)
     dac8568_dev0.start_conv()
 
     """ DAC8568 dev 1 Settings"""
     global_dev.set_dac_nr(0)
     dac8568_dev1.reset_dev()
     dac8568_dev1.select_ch(0xff)
-    dac8568_dev1.set_volt(1.0)
+    dac8568_dev1.set_volt(ch=1, volt=1.0)
     dac8568_dev1.start_conv()
 
     """ Config CEE """
